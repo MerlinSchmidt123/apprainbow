@@ -1,0 +1,1 @@
+export function Button({ children, ...props }) { return <button className="rounded-xl border px-4 py-2 bg-blue-500 text-white" {...props}>{children}</button>; }

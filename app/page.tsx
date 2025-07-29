@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,7 @@ export default function ZeiterfassungApp() {
 
   const calculateWorkedHours = () => {
     if (!startTime || !endTime) return 0;
-    const diff = (endTime - startTime) / (1000 * 60); // in Minuten
+    const diff = (endTime - startTime) / (1000 * 60);
     return Math.max(0, ((diff - pauseMinutes) / 60).toFixed(2));
   };
 
@@ -38,7 +37,6 @@ export default function ZeiterfassungApp() {
       workedHours,
     };
     setLog([...log, entry]);
-    // Reset
     setStartTime(null);
     setEndTime(null);
     setPauseMinutes(0);
